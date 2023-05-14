@@ -1,0 +1,30 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.levelup.LevelUpDemo</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>LevelUpDemo</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="kalpeshdoru@gmail.com" url="">Level Up</vendor>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+    <actions>
+        <action id="stack.overflow"
+                description="Search on stack overflow"
+                text="Search With Stack Overflow"
+                class="com.levelup.levelupdemo.action.StackOverFlowAction">
+            <add-to-group group-id="ConsoleEditorPopupMenu"/>
+        </action>
+
+    </actions>
+</idea-plugin>
